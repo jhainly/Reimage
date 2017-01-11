@@ -1,0 +1,43 @@
+[production_proxy]
+proxytype = # HTTPS or HTTP proxy? [https|http]
+proxyurl = https://<proxy username>:<proxy password>@<proxy hostname/IP>:<proxy port>
+
+[production_servicenow]
+url = https://<hostname>.service-now.com/api/now/table/incident
+user = # ServiceNow production username
+pwd = # ServiceNow production password
+
+[development_servicenow]
+url = https://<hostname>.service-now.com/api/now/table/incident
+user = # ServiceNow dev username
+pwd = # ServiceNow dev password
+
+[snOptions]
+teamName = # Name of security team (Hershey Information Security)
+assignment_group = # Incident assignment group value
+impact = # Incident impact value
+urgency = # Incident urgency value
+priority = # Incident priority value
+incident_state = # Incident state value
+state = # Incident state value
+category = # ServiceNow category
+subcategory = # ServiceNow sub-category
+
+[splunk]
+host= # Splunk hostname or IP address
+port= # Splunk port (default is 8089)
+username= # Splunk system account username
+password= # Splunk system account password
+lookupFile = # Splunk active directory lookup file
+
+[sep]
+authurl = https://<hostname>:<port>/sepm/oauth/token?grant_type=refresh_token&client_id=<your-client-id>&client_secret=<your-client-secret>&redirect_uri=https://localhost/sepm&refresh_token=<your-refresh-token>
+wsdl = https://<hostname>:<port>/sepm/ws/v1/ClientService?wsdl
+
+[email]
+testEmail = # Email address for person testing scripts
+groupEmail = # Name of distribution email address for team
+smtp = # Name of SMTP mail server
+trainingSite = # Name of training website
+teamName = # Name of security team (Hershey Information Security)
+teamLogo = # filename of image to include in signature of emails
